@@ -1,0 +1,24 @@
+{
+  "name": "srvyuru.api_recipes",
+  "version": "1.0.0",
+  "description": "- [ ] Docker compose con Mongo y volumenes! (Ver cluster)\r - [ ] node.js\r - [ ] express\r - [ ] Kubernetes\r - [ ] Consultar recetas\r - [ ] Crear recetas\r - [ ] ¡Usuarios! {{passport y jwt}}",
+  "main": "index.js",
+  "scripts": {
+    "start" : "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mauroloprete/srvyuRu.api_recipes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mauroloprete/srvyuRu.api_recipes/issues"
+  },
+  "homepage": "https://github.com/mauroloprete/srvyuRu.api_recipes#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.7.0"
+  }
+}
