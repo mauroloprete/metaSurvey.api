@@ -6,9 +6,11 @@ services:
         restart: always
         build: .
         ports:
-            - "5000:3000"
+            - "3000:3000"
         links:
             - db_mongo
+        volumes:
+            - .:/usr/src/app
 
     db_mongo:
         container_name: db_mongo
@@ -17,3 +19,6 @@ services:
             - "27018:27017"
         volumes:
             - ./mongo/data:/data/db
+        logging:
+            driver: none
+        command: mongod --quiet --logpath /dev/null 
