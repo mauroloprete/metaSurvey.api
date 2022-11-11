@@ -1,5 +1,4 @@
-# Api para obtener y crear recetas en base MongoDB del srvyuRu
-
+# API REST de recetas y diseños del metaSurvey
 
 # TODO:
 

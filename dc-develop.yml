@@ -5,12 +5,15 @@ services:
         container_name: node_server
         restart: always
         build: .
+        command: npm run dev
         ports:
             - "3000:3000"
         links:
             - db_mongo
         volumes:
             - .:/usr/src/app
+        environment:
+            URI_MONGO: "${URI_MONGO}"
 
     db_mongo:
         container_name: db_mongo
@@ -21,4 +24,4 @@ services:
             - ./mongo/data:/data/db
         logging:
             driver: none
-        command: mongod --quiet --logpath /dev/null 
+        command: mongod --quiet --logpath /dev/null
