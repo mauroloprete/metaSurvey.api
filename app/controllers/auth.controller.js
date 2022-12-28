@@ -21,3 +21,11 @@ export const login = async(req, res) => {
     res.json({ok: "chauu huheeeu"})
 }
 
+export const saludo = async(req,res) => {
+    res.json(
+        {
+            ok: "Hola puta pijeraaaa"
+        }
+    )
+}
+
