@@ -4,7 +4,7 @@ services:
     node_server:
         container_name: node_server
         restart: always
-        build: .
+        build: ./app
         command: npm run dev
         ports:
             - "3000:3000"
@@ -22,7 +22,14 @@ services:
         ports:
             - "27018:27017"
         volumes:
-            - ./mongo/data:/data/db
+            - ./app/mongo/data:/data/db
         logging:
             driver: none
         command: mongod --quiet --logpath /dev/null
+
+    nginx:
+        restart: always
+        build:
+            context: ./nginx
+        ports:
+            - "80:80"

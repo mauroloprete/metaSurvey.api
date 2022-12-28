@@ -2,11 +2,11 @@ FROM node:16
 
 RUN mkdir -p /usr/src/app
 
-WORKDIR /usr/src/app
-
-COPY package*.json ./
+WORKDIR /usr/src/app/
 
 COPY . .
+
+RUN ls
 
 RUN npm install
 
