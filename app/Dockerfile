@@ -1,12 +1,10 @@
 FROM node:16
 
-RUN mkdir -p /usr/src/app
+RUN mkdir -p /usr/src/
 
-WORKDIR /usr/src/app/
+WORKDIR /usr/src/
 
 COPY . .
-
-RUN ls
 
 RUN npm install
 

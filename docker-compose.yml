@@ -4,8 +4,9 @@ services:
     node_server:
         container_name: node_server
         restart: always
-        build: ./app
-        command: npm run dev
+        build: 
+            context: ./app
+        command: npm run start
         ports:
             - "3000:3000"
         links:
